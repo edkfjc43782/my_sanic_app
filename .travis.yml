@@ -11,4 +11,4 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - docker-compose run my_sanic_app_my_sanic_app_1 sh -c "pytest && flake8"
+  - docker-compose run my_sanic_app sh -c "pytest && flake8"
