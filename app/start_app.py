@@ -8,7 +8,7 @@ app.config.from_object(default_setting)
 
 @app.route("/")
 async def test(request):
-    return json({"hello": "world"})
+    return json({"hello": "docker"})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8010, debug=True)

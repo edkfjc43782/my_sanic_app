@@ -13,4 +13,4 @@ before_script:
   - pip install -r requirements.txt
 
 script:
-  - docker-compose run my_sanic_app sh -c "pytest && flake8"
+  - pytest && flake8
