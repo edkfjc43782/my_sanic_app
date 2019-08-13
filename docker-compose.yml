@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  my_sanic_app:
+    image: my_sanic_app
+    build:
+      context: .
+    ports:
+      - 8010:8010
+    working_dir: /app
+    volumes:
+      - ./app:/app
