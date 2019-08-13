@@ -1,7 +1,10 @@
 from sanic import Sanic
 from sanic.response import json
 
-app = Sanic()
+import default_setting
+
+app = Sanic('my_sanic_app')
+app.config.from_object(default_setting)
 
 @app.route("/")
 async def test(request):
