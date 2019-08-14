@@ -7,6 +7,7 @@ from models.create_db import create_tables
 app = Sanic('my_sanic_app')
 app.config.from_object(default_setting)
 
+
 @app.route("/")
 async def test(request):
     return json({"hello": "docker"})
