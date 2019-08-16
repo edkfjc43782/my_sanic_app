@@ -7,7 +7,7 @@ from models.create_db import create_tables
 from resources.users import user_bp
 
 
-app = Sanic('my_sanic_app')
+app = Sanic("my_sanic_app")
 app.config.from_object(default_setting)
 
 app.blueprint(swagger_blueprint)
@@ -18,6 +18,7 @@ app.blueprint(user_bp)
 @doc.exclude(True)
 async def test(request):
     return json({"hello": "docker"})
+
 
 if __name__ == "__main__":
     create_tables()

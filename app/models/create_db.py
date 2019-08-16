@@ -1,6 +1,7 @@
 from models.base_model import db
 
 from models.users import User
+
 # from models.books import Book
 
 
