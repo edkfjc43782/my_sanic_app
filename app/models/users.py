@@ -20,7 +20,7 @@ class User(BaseModel):
     def find_all(cls):
         users = cls.select()
         return users
-    
+
     @classmethod
     def find_by_user_id(cls, user_id):
         user = cls.get_or_none(cls.id == user_id)
@@ -32,7 +32,7 @@ class User(BaseModel):
         query.execute()
         user = cls.get_or_none(cls.id == user_id)
         return user
-    
+
     @classmethod
     def delete_by_id(cls, user_id):
         query = cls.delete().where(cls.id == user_id)
