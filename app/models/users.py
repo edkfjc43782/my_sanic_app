@@ -37,3 +37,8 @@ class User(BaseModel):
     def delete_by_id(cls, user_id):
         query = cls.delete().where(cls.id == user_id)
         query.execute()
+
+    @classmethod
+    def delete_by_username(cls, username):
+        query = cls.delete().where(cls.username == username)
+        query.execute()
