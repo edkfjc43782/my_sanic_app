@@ -11,12 +11,14 @@ EXPOSE 8010
 
 ENV PYTHONUNBUFFERED 1
 
+RUN apk add git
 RUN mkdir /app
-# WORKDIR /app
-# COPY ./app /app
+WORKDIR /app
+COPY ./app /app
 
-COPY ./app/requirements.txt /app/requirements.txt
+# COPY ./app/requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
 CMD ["tail", "-f", "/dev/null"]
+# CMD ["python", "start_app.py"]
 
