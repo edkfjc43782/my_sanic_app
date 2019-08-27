@@ -6,9 +6,8 @@ python:
 services:
   - docker
 
-install:
-  - pip install -r app/requirements.txt
+before_script:
+  - pip install docker-compose
 
 script: 
-  # - docker-compose run my_sanic_app sh -c "pytest && black ."
-  - pytest && black .
+  - docker-compose run my_sanic_app sh -c "pytest && black ."
