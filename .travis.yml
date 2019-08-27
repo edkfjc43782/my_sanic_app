@@ -11,4 +11,4 @@ before_script:
 
 script: 
   # - docker-compose run my_sanic_app sh -c "pytest && black ."
-  - pytest tests && black .
+  - pytest && black .
