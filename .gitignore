@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # sqlite
-mysanicapp.db
+# mysanicapp.db
