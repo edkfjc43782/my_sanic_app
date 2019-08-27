@@ -8,10 +8,12 @@ services:
 
 before_script:
   - pip install docker-compose
+  - docker build -t $DOCKER_USERNAME/my_sanic_app:latest .
 
 script: 
   - docker-compose run my_sanic_app sh -c "pytest && black ."
+
+after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build -t $DOCKER_USERNAME/my_sanic_app:latest .
   - docker push $DOCKER_USERNAME/my_sanic_app:latest
   
