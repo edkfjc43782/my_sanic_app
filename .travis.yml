@@ -16,5 +16,5 @@ script:
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build --rm -f "Dockerfile" -t $(DOCKER_USERNAME)/my_sanic_app:latest
-  - docker push $(DOCKER_USERNAME)/my_sanic_app:latest
+  - docker build --rm -f "Dockerfile" -t ${DOCKER_USERNAME}/my_sanic_app:latest
+  - docker push ${DOCKER_USERNAME}/my_sanic_app:latest
